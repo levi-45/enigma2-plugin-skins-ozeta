@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<!-- **************************************  -->
+	<!-- Skin oZeta-FHD by mmark v1.2.0 	     -->
+	<!-- released for use on Open images         -->
+	<!-- Currently Tested on PLI v8.X            -->
+	<!-- Don't Remove this Disclaimer            -->
+	<!-- Release  v.1.5.1 17/05/2021             -->
+	<!-- **************************************  -->
+	<copyright>
+		<abouth name="oZeta-FHD"> 
+			author="mmark" 
+			license="Open" 
+			Support="All Open Images" 
+			Release="1.5.1 17/05/2021" 
+			supporturl="http://e2skin.blogspot.com" 
+		</abouth>
+	</copyright>
+  	<!-- *************************************** -->
+  	<!--  TEMPLATES * TEMPLATES * TEMPLATES *    -->
+  	<!-- **************************************  -->
+
+	<!-- ************* Menu Templates ************* -->
+
+	<screen name="LayerMenu1000">
+		<ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/picmenu/sLogo.png" alphatest="blend" transparent="1" zPosition="1" />
+		<widget source="Title" render="Label" position="385,7" size="640,110" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" zPosition="5" />
+		<eLabel  position="230,120" size="810,3" backgroundColor="#303030" zPosition="4" />
+		<ePixmap position="0,0" size="1920,1080" pixmap="oZeta-FHD/picmenu/main1.png" zPosition="-1" />
+		<eLabel  position="230,960" size="810,3" backgroundColor="#303030" zPosition="4" />
+	</screen>
+
+	<screen name="LayerMenu1300">
+		<ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/picmenu/sLogo.png" alphatest="blend" transparent="1" zPosition="1" />
+		<widget source="Title" render="Label" position="385,7" size="1080,110" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" zPosition="5" />
+		<eLabel  position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4" />
+		<ePixmap position="0,0" size="1300,1080" pixmap="oZeta-FHD/picmenu/main2.png" zPosition="-2" />
+		<ePixmap position="1300,0" size="620,1080" pixmap="oZeta-FHD/picmenu/pC.png" zPosition="-1" />
+		<eLabel  position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4" />
+	</screen>
+
+	<screen name="LayerMenu1500">
+		<ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/picmenu/sLogo.png" alphatest="blend" transparent="1" zPosition="1" />
+		<widget source="Title" render="Label" position="385,7" size="1090,110" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" zPosition="5" />
+		<eLabel  position="230,120" size="1250,3" backgroundColor="#303030" zPosition="4" />
+		<ePixmap position="0,0" size="1500,1080" pixmap="oZeta-FHD/picmenu/main2.png" zPosition="-2" />
+		<ePixmap position="1500,0" size="420,1080" pixmap="oZeta-FHD/picmenu/pC.png" zPosition="-1" />
+		<eLabel  position="230,960" size="1250,3" backgroundColor="#303030" zPosition="4" />
+	</screen>
+
+	<screen name="LayerMenu1700">
+		<ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/picmenu/sLogo.png" alphatest="blend" transparent="1" zPosition="1" />
+		<widget source="Title" render="Label" position="385,7" size="1290,110" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" zPosition="5" />
+		<eLabel  position="230,120" size="1450,3" backgroundColor="#303030" zPosition="4" />
+		<ePixmap position="0,0" size="1700,1080" pixmap="oZeta-FHD/picmenu/main2.png" zPosition="-2" />
+		<ePixmap position="1700,0" size="480,1080" pixmap="oZeta-FHD/picmenu/pC.png" zPosition="-1" />
+		<eLabel  position="230,960" size="1450,3" backgroundColor="#303030" zPosition="4" />
+	</screen>
+
+	<screen name="LayerFull">
+		<ePixmap position="220,32" size="160,81" pixmap="oZeta-FHD/picmenu/sLogo.png" alphatest="blend" transparent="1" zPosition="1" />
+		<widget source="Title" render="Label" position="385,7" size="1490,110" font="Mmenu;102" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" zPosition="5" />
+		<eLabel  position="0,120" size="1920,3" backgroundColor="#303030" zPosition="4" />
+		<eLabel  position="30,30" size="1860,1020" backgroundColor="#303030" zPosition="-2" />
+		<eLabel  position="50,50" size="1820,980"  backgroundColor="#303030" zPosition="-1" />
+		<eLabel  position="60,960" size="1800,3" backgroundColor="#303030" zPosition="4" />
+	</screen>
+
+	<screen name="MenuTemplate">
+		<widget source="menu" render="Listbox" position="230,150" size="810,780" font="Regular;36" backgroundColorSelected="#124b97" transparent="1" zPosition="2" 
+			scrollbarMode="showOnDemand" scrollbarWidth="10" scrollbarSliderForegroundColor="#505050" scrollbarSliderBackgroundColor="#303030" >
+			<convert type="TemplatedMultiContent">
+				{"template": [ MultiContentEntryText(pos = (10,0),size = (800,60),flags = RT_HALIGN_LEFT|RT_VALIGN_CENTER,text = 0) ],
+					"fonts": [gFont("Regular",36)],	"itemHeight": 60}
+			</convert>
+		</widget>
+	</screen>
+
+	<screen name="MetrixMenu">
+		<panel name="LayerMenu1700" />
+		<widget source="titleText" render="Label" position="385,7" size="1500,110" noWrap="1" font="Mmenu;102" foregroundColor="#808080" backgroundColor="#000000" transparent="1" />
+		<widget name="config" position="230,140"  size="1060,760" itemHeight="60" font="Regular;30" scrollbarSliderBorderWidth="1" scrollbarWidth="10" scrollbarSliderForegroundColor="#808080" 
+			scrollbarSliderBorderColor="#606060" scrollbarMode="showOnDemand" enableWrapAround="1" backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" 
+			foregroundColorSelected="ffffff" transparent="1" />
+		<widget name="helperimage" position="1360,150" size="300,300" backgroundColor="layer-b-background" zPosition="1" transparent="1" alphatest="blend" scale="1" />
+		<widget name="helpertext"  position="1300,460" size="390,440" font="screen_info;24" foregroundColor="yellow" halign="center" backgroundColor="#000000" valign="top" transparent="1"/>
+		<ePixmap position="230,1010"  pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="cancelBtn" render="Label" font="Regular;30" position="280,1005" size="200,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="490,1010" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="saveBtn" render="Label" font="Regular;30" position="530,1005" size="200,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="740,1010" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget  source="defaultsBtn" render="Label" font="Regular;30" position="780,1005" size="200,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1090,1010" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+	</screen>
+
+	<!-- ************* Button Templates Colors Name ************* -->
+	
+	<screen name="cR">
+		<ePixmap position="230,1008"  pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_red,Label,Button" name="key_red"                font="Regular;30" position="270,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="Regular;30" position="270,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cY">
+		<ePixmap position="230,1008"  pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow"                font="Regular;30" position="270,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="Regular;30" position="270,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cRG">
+		<panel name="cR"/>
+		<ePixmap position="530,1008" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_green,Label,Button" name="key_green"                font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cRB">
+		<panel name="cR"/>
+		<ePixmap position="520,1008" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue"                font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cYB">
+		<panel name="cY"/>
+		<ePixmap position="530,1008" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue"                font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cRY">
+		<panel name="cR"/>
+		<ePixmap position="530,1008" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow"                font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cRGY">
+		<panel name="cRG"/>
+		<ePixmap position="830,1008" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow"                font="Regular;30" position="870,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="Regular;30" position="870,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+	
+	<screen name="cRYB">
+		<panel name="cRY"/>
+		<ePixmap position="830,1008" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue"                font="Regular;30" position="870,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="870,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cRGB">
+		<panel name="cRG"/>
+		<ePixmap position="830,1008" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue"                font="Regular;30" position="870,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="870,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cRGYB">
+		<panel name="cRGY"/>
+		<ePixmap position="1130,1008" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue"                font="Regular;30" position="1170,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="1170,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+	
+	<screen name="cvRGYB">
+		<ePixmap position="230,985"   pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="Regular;30" position="270,982" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_red,StaticText" source="key_rd" render="Label" font="Regular;30" position="270,982" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="230,1035"  pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1010,985"  pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="Regular;30" position="650,985" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="Regular;30" position="650,985" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1010,1035" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="Regular;30" position="650,1030" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="650,1030" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+	
+	<screen name="cvRGB">
+		<ePixmap position="230,985"   pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="button_key_red" font="Regular;30" position="270,980" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="Regular;30" position="270,980" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="230,1035"  pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1010,985"  pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="Regular;30" position="650,981" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="650,981" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+	
+	<screen name="cvRGY">
+		<ePixmap position="230,985"   pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2"/>
+		<widget objectTypes="key_red,Label,Button" name="button_key_red" font="Regular;30" position="270,980" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="Regular;30" position="270,980" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="230,1035"  pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1010,985"  pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="Regular;30" position="650,981" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="Regular;30" position="650,981" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cvRYB">
+		<ePixmap position="230,985"   pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="Regular;30" position="270,980" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="Regular;30" position="270,980" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="230,1035"  pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1010,985"  pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="Regular;30" position="650,981" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="650,981" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+	
+	<screen name="cvGYB">
+		<ePixmap position="230,985"   pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="Regular;30" position="270,980" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="Regular;30" position="270,980" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="230,1035"  pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="Regular;30" position="270,1030" size="350,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1010,985"  pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue"  font="Regular;30" position="650,981" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="650,981" size="350,40" halign="right" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+	
+	<screen name="cbRG">
+		<ePixmap position="230,1008"  pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+          	<widget name="buttonred" font="Regular;30" position="270,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="530,1008" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+           	<widget name="buttongreen" font="Regular;30" position="570,975" size="250,95" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+	</screen>
+
+	<screen name="fullRGYB">
+   		<eLabel position="30,985" size="1860,3" backgroundColor="#303030" zPosition="1" />
+		<ePixmap position="30,1028"  pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="Regular;30" position="70,1025" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="Regular;30" position="70,1025" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="390,1028" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="Regular;30" position="430,1025" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="Regular;30" position="975,1025" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="750,1028" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="Regular;30" position="790,1025" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="Regular;30" position="790,1025" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1110,1028" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="Regular;30" position="1150,1025" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="1150,1025" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<!-- ************* Button Templates Colors Source Nkey  ************* -->
+
+	<screen name="icRGYB">
+		<ePixmap position="30,1033"  pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_red,Label,Button" name="key_red" font="Regular;30" position="70,1030" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_red,StaticText" source="key_red" render="Label" font="Regular;30" position="70,1030" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="390,1033" pixmap="oZeta-FHD/buttons/button_green.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_green,Label,Button" name="key_green" font="Regular;30" position="430,1030" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_green,StaticText" source="key_green" render="Label" font="Regular;30" position="975,1030" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="750,1033" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_yellow,Label,Button" name="key_yellow" font="Regular;30" position="790,1030" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_yellow,StaticText" source="key_yellow" render="Label" font="Regular;30" position="790,1030" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+		<ePixmap position="1110,1033" pixmap="oZeta-FHD/buttons/button_blue.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget objectTypes="key_blue,Label,Button" name="key_blue" font="Regular;30" position="1150,1030" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="1" transparent="1" />
+		<widget objectTypes="key_blue,StaticText" source="key_blue" render="Label" font="Regular;30" position="1150,1030" size="300,40" halign="left" valign="center" backgroundColor="black" zPosition="2" transparent="1" />
+	</screen>
+
+	<screen name="cnkR">
+		<!-- Keys Buttons FHD -->
+		<ePixmap position="230,1008"  pixmap="oZeta-FHD/buttons/button_red.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget source="red" render="Label" position="270,975" size="250,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+		<widget name="red" position="270,975" size="250,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+	
+	<screen name="cnkRG">
+		<!-- Keys Buttons FHD -->
+		<panel name="skR" />
+		<ePixmap position="520,1008" pixmap="oZeta-FHD/buttons/button_green.png"  size="30,30" alphatest="blend" zPosition="2" />
+		<widget source="green" render="Label" position="560,975" size="250,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+		<widget name="green"  position="560,975" size="250,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+
+	<screen name="cnkRGY">
+		<!-- Keys Buttons FHD -->
+		<panel name="skRG" />
+		<ePixmap position="800,1008" pixmap="oZeta-FHD/buttons/button_yellow.png" size="30,30" alphatest="blend" zPosition="2" />
+		<widget source="yellow" render="Label" position="840,975" size="250,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+		<widget name="yellow" position="840,975" size="250,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+
+	<screen name="cnkRGYB">
+		<!-- Keys Buttons FHD -->
+		<panel name="skRGY" />
+		<ePixmap position="1070,1008" pixmap="oZeta-FHD/buttons/button_blue.png"   size="30,30" alphatest="blend" zPosition="2" />
+		<widget source="blue" render="Label" position="1110,975" size="250,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+		<widget name="blue" position="1110,975" size="250,95" zPosition="1" font="Regular;30" halign="left" valign="center" foregroundColor="#b0b0b0" backgroundColor="header" transparent="1" />
+	</screen>
+	
+	<!-- ************* Button Templates Code ************* -->
+
+	<!-- VKeyIconPanel -->
+	<!--This conditionally shows "Text" to indicate that the virtual keyboard can be activated by pressing the "Subtitle/Text" button-->
+	<screen name="VKeyIconPanel">
+		<widget source="VKeyIcon" position="1520,950" size="80,40" conditional="VKeyIcon" render="Pixmap" pixmap="skin_default/buttons/key_text.png" alphatest="blend" zPosition="2">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+	</screen>
+
+	<!-- Templates -->
+	<screen name="PlayerTemplate">
+		<ePixmap pixmap="oZeta-FHD/picmenu/ibtop.png" position="0,733" size="1920,347" zPosition="1" alphatest="blend" />
+		<ePixmap pixmap="oZeta-FHD/icons/icon_event.png" position="260,885" size="44,35" alphatest="blend" zPosition="1"/>
+		<widget source="session.RecordState" render="Pixmap" pixmap="oZeta-FHD/icons/icon_event.png_rec" position="260,885" size="44,35" alphatest="blend" zPosition="2" >
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="320,882" size="150,40" font="Regular;36" halign="left" valign="center" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="2" >
+			<convert type="ServicePosition">Position,ShowHours</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="480,882" size="900,40" font="Regular;30" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="2" >
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1360,882" size="175,40" font="Regular;36" halign="right" valign="center" foregroundColor="red" backgroundColor="#000000" transparent="1" zPosition="2" >
+			<convert type="ServicePosition">Remaining,Plus,ShowHours</convert>
+		</widget>
+		<!-- eLabel position="320,935" size="1220,10" backgroundColor="#303030" zPosition="2"/
+		<widget source="session.CurrentService" render="PositionGauge" position="320,931" size="1220,18" pointer="dvr/pointercl.png:1220,4" foregroundColor="white" backgroundColor="bluette" transparent="1" zPosition="4" >
+			<convert type="ServicePosition">Gauge</convert>
+		</widget>
+		-->
+		<widget source="session.CurrentService" render="Progress" position="320,934" size="1220,10" foregroundColor="white" backgroundColor="bluette" transparent="0" zPosition="5" >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="320,958" size="150,40" font="Regular;36" halign="left" valign="center" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" noWrap="1" zPosition="2" >
+			<convert type="ServicePosition">Length,ShowHours</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" position="1360,958" size="175,40" font="Regular;36" halign="right" valign="center" foregroundColor="#808080" backgroundColor="#000000" noWrap="1" transparent="1" zPosition="2" >
+			<convert type="ClockToText">Format:%-H:%M:%S</convert>
+		</widget>
+		<!-- Progressbar (movie position)
+		<eLabel position="460,960" size="960,2" backgroundColor="#202020" zPosition="1" />
+		<widget source="session.CurrentService" render="Progress" position="460,958" size="960,6" foregroundColor="bluette" backgroundColor="bluette" transparent="1" zPosition="3" >
+			<convert type="ServicePosition">Position</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1700,890" size="220,40" font="Regular;36" halign="center" valign="top" foregroundColor="#707070" backgroundColor="#000000" transparent="1" zPosition="2" >
+			<convert type="PliExtraInfo">ResolutionString</convert>
+		</widget>
+		-->
+	</screen>
+
+	<!-- Config and list template. Some people use "config" and others use "list" -->
+	<screen name="listTemplate-1250">
+		<widget name="config" conditional="config" position="230,150" size="1250,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="5" selectionPixmap="picmenu/sl1000.png" />
+		<widget name="list"   conditional="list"   position="230,150" size="1250,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="5" selectionPixmap="picmenu/sl1000.png" />
+	</screen>
+
+	<!-- Config and list template. Some people use "config" and others use "list" -->
+	<screen name="listTemplate-810">
+		<widget name="config" conditional="config" position="230,150" size="810,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="5" selectionPixmap="picmenu/sl1000.png" />
+		<widget name="list"   conditional="list"   position="230,150" size="810,700" font="Regular;30" itemHeight="50" scrollbarMode="showOnDemand" scrollbarWidth="10" transparent="1" zPosition="5" selectionPixmap="picmenu/sl1000.png" />
+	</screen>
+
+	<!-- Setup Screens -->
+	<screen name="setup_common">
+		<panel name="LayerMenu1500" />
+		<panel name="cRG"/>
+		<widget name="description" position="230,150" size="1250,90" font="Regular;26" foregroundColor="yellow" halign="center" valign="center" backgroundColor="#202020" transparent="0" zPosition="1"/>
+                <eLabel position="230,250" size="1250,3" backgroundColor="#202020" zPosition="1" />
+		<widget name="config" position="230,260" size="1250,650" itemHeight="50" font="Regular;30" foregroundColor="#ffffff" backgroundColor="#000000" scrollbarSliderBorderWidth="1" scrollbarWidth="10" enableWrapAround="1" 
+			scrollbarMode="showOnDemand" scrollbarSliderForegroundColor="#606060" scrollbarSliderBorderColor="#808080" backgroundColorSelected="barColor" foregroundColorSelected="white" transparent="1" />
+		<widget name="HelpWindow" position="230,700" size="486,102" zPosition="1" transparent="1" alphatest="blend" />
+		<widget name="footnote" position="230,800" size="0,0" font="Regular;28" halign="right" valign="center" backgroundColor="#202020" foregroundColor="yellow" transparent="0" />
+	</screen>
+
+	<!-- Setup Screens -->
+	<screen name="standardList810">
+		<widget name="list" position="230,140" size="810,650" listMarginLeft="5" listMarginRight="5" fieldMargins="15" itemsDistances="15" 
+			itemHeight="50" serviceItemHeight="40" serviceNumberFont="Regular;26" serviceNameFont="Regular;26" serviceInfoFont="Regular;26" 
+			scrollbarMode="showNever" scrollbarWidth="10" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="#808080" scrollbarSliderForegroundColor="#808080" 
+			progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" 
+			colorServiceRecorded="red" colorServicePseudoRecorded="red" colorServiceStreamed="green" colorServiceDescription="white" 
+			colorServiceDescriptionSelected="ltbluette" colorEventProgressbar="ltbluette" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="white" 
+			foregroundColorServiceNotAvail="#00555555" progressInfoFont="Regular;26" 
+			backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="ltbluette" transparent="1" />
+                <eLabel position="230,860" size="810,3" backgroundColor="#202020" zPosition="1" />
+                <eLabel position="230,862" size="810,90" backgroundColor="#202020" zPosition="1" />
+	</screen>
+	
+	<!-- Setup Screens -->
+	<screen name="standardList1250">
+		<widget name="list" position="230,140" size="1250,700" listMarginLeft="5" listMarginRight="5" fieldMargins="15" itemsDistances="15" 
+			itemHeight="50" serviceItemHeight="40" serviceNumberFont="Regular;26" serviceNameFont="Regular;26" serviceInfoFont="Regular;26" 
+			scrollbarMode="showNever" scrollbarWidth="10" scrollbarSliderBorderWidth="1" scrollbarSliderBorderColor="#808080" scrollbarSliderForegroundColor="#808080" 
+			progressbarHeight="8" progressBarWidth="50" progressbarBorderWidth="1" 
+			colorServiceRecorded="red" colorServicePseudoRecorded="red" colorServiceStreamed="green" colorServiceDescription="white" 
+			colorServiceDescriptionSelected="ltbluette" colorEventProgressbar="ltbluette" colorEventProgressbarBorder="grey" colorEventProgressbarBorderSelected="white" 
+			foregroundColorServiceNotAvail="#00555555" progressInfoFont="Regular;26" 
+			backgroundColor="#000000" foregroundColor="#ffffff" backgroundColorSelected="barColor" foregroundColorSelected="ltbluette" transparent="1" />
+                <eLabel position="230,860" size="1250,3" backgroundColor="#202020" zPosition="1" />
+                <eLabel position="230,862" size="1250,90" backgroundColor="#202020" zPosition="1" />
+	</screen>
+
+	<!-- Infobar Template -->
+	<screen name="InfoBarTemplate">
+		<widget source="session.CurrentService" render="Picon" position="30,967" size="150,90" alphatest="blend" backgroundColor="#000000" transparent="1" zPosition="1">
+			<convert type="ServiceName">Reference</convert>
+		</widget>
+		<widget source="session.CurrentService" render="ChannelNumber" borderWidth="2" position="260,880" size="150,75" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="#ffffff" font="Regular;40" valign="center" halign="left"/>
+		<widget source="session.CurrentService" render="Label" borderWidth="2" position="387,880" size="774,75" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="#ffffff" font="Regular;40" valign="center" halign="left">
+			<convert type="ServiceName">Name</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="30,845" size="540,45" backgroundColor="#000000" noWrap="1" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;26" valign="center" halign="left">
+			<convert type="ClockToText">Date</convert>
+		</widget>
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="30,880" size="210,75" backgroundColor="#000000" noWrap="1" transparent="1" zPosition="1" foregroundColor="#ffffff" font="Regular;39" valign="center" halign="left">
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<eLabel position="134,897" size="10,33" text=":" transparent="1" borderWidth="2" font="Regular;27" backgroundColor="#000000" foregroundColor="#ffffff" valign="center" halign="center"/>
+		<widget source="global.CurrentTime" render="Label" borderWidth="2" position="144,897" size="52,33" backgroundColor="#000000" noWrap="1" transparent="1" zPosition="1" foregroundColor="#ffffff" font="Regular;27" valign="center" halign="left">
+			<convert type="ClockToText">Format:%S</convert>
+		</widget>
+		<widget source="session.RecordState" render="Pixmap" pixmap="oZeta-FHD/buttons/rec.png" position="205,902" size="30,30" zPosition="3" alphatest="on">
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Label" borderWidth="2" position="695,845" size="945,45" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;26" valign="center" halign="right">
+			<convert type="CryptoInfo">VerboseInfo</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="260,978" size="105,45" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="#ffffff" font="Regular;36" halign="left">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="387,978" size="1072,45" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="#ffffff" noWrap="1" font="Regular;36" halign="left">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Label" position="1430,978" size="210,45" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="#ffffff" font="Regular;36" halign="right">
+			<convert type="EventTime">Remaining</convert>
+			<convert type="RemainingToText">InMinutes</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="260,1023" size="105,45" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" halign="left">
+			<convert type="EventTime">StartTime</convert>
+			<convert type="ClockToText">Format:%H:%M</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="387,1023" size="1072,45" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="grey" noWrap="1" font="Regular;36" halign="left">
+			<convert type="EventName">Name</convert>
+		</widget>
+		<widget source="session.Event_Next" render="Label" position="1430,1023" size="210,45" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="grey" font="Regular;36" halign="right">
+			<convert type="EventTime">Duration</convert>
+			<convert type="ClockToText">InMinutes</convert>
+		</widget>
+		<widget source="session.Event_Now" render="Progress" pixmap="oZeta-FHD/infobar/pbar.png" position="260,952" size="1380,12" backgroundColor="un33333a" transparent="0" zPosition="2" borderWidth="0">
+			<convert type="EventTime">Progress</convert>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_format_4_3.png" position="1576,901" size="60,32" zPosition="3" alphatest="on">
+			<convert type="ServiceInfo">IsSDAndNotWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_format_16_9.png" position="1576,901" size="60,32" zPosition="3" alphatest="on">
+			<convert type="ServiceInfo">IsSDAndWidescreen</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_format_hd.png" position="1576,901" size="60,32" zPosition="4" alphatest="on">
+			<convert type="ServiceInfo">IsHD</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_format_4k.png" position="1576,901" size="60,32" zPosition="4" alphatest="on">
+			<convert type="ServiceInfo">Is4K</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_txt_on.png" position="1520,901" size="50,32" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">HasTelext</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<!--
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_dolby_on.png" position="1465,901" size="50,32" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">IsMultichannel</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_crypt_on.png" position="1435,901" size="25,32" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">IsCrypted</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_hbbtv_on.png" position="1360,901" size="70,32" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">HasHBBTV</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_sub_on.png" position="1304,901" size="50,32" zPosition="2" alphatest="on">
+			<convert type="ServiceInfo">SubservicesAvailable</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.Event_Now" render="Pixmap" pixmap="oZeta-FHD/infobar/ico_pdc.png" position="1240,901" size="58,32" zPosition="2" alphatest="on">
+			<convert type="EventName">Pdc</convert>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget source="session.CurrentService" render="Pixmap" pixmap="oZeta-FHD/buttons/stream.png" position="1204,902" size="30,30" zPosition="3" alphatest="on">
+			<convert type="ClientsStreaming"/>
+			<convert type="ConditionalShowHide"/>
+		</widget>
+		<widget render="VideoSize" source="session.CurrentService" position="1705,943" size="165,30" backgroundColor="#000000" font="Regular;28" foregroundColor="#ffffff" halign="left" transparent="1" zPosition="1"/>
+		<widget source="session.FrontendStatus" render="Label" position="1705,985" size="112,33" backgroundColor="#000000" transparent="1" zPosition="1" foregroundColor="#ffffff" font="Regular;28">
+			<convert type="FrontendInfo">SNRdB</convert>
+		</widget>
+		<widget source="session.FrontendInfo" render="Label" position="1705,900" size="200,30" borderWidth="1" borderColor="black" zPosition="1" backgroundColor="transpBlack" transparent="1" halign="left" font="Regular;30">
+			<convert type="FrontendInfo">STRING</convert>
+		</widget>
+		-->
+		<widget source="session.CurrentService" render="Label" position="1705,1027" size="165,33" backgroundColor="#000000" transparent="1" zPosition="1" text="DVB-S" font="Regular;28">
+			<convert type="ServiceOrbitalPosition"/>
+		</widget>
+		<widget source="session.CurrentService" render="Label" position="1705,856" size="180,25" borderWidth="1" borderColor="black" backgroundColor="transpBlack" zPosition="1" font="Regular;22" transparent="1">
+			<convert type="RotorPosition"/>
+		</widget>
+		<!--<ePixmap pixmap="oZeta-FHD/icons/icon_update_off.png" position="90,52" size="30,30" zPosition="0" alphatest="blend"/>-->
+	</screen>
+
+	<!-- Infobar Template -->
+	<screen name="infoCrypt">
+		<eLabel position="1590,960" size="330,50" backgroundColor="#15000000" zPosition="10" />
+		<eLabel text="FTA" position="1590,975" size="330,45" font="Regular;28" backgroundColor="#17000000" foregroundColor="#808080" transparent="1" zPosition="3" />
+		<widget source="session.CurrentService" render="FixedLabel" position="1590,975" size="330,45" text="BetaCrypt"   font="Regular;26" backgroundColor="#17000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="MetrixHDChannelCryptoInfo">BetaCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1590,975" size="330,45" text="ViaCrypt"    font="Regular;26" backgroundColor="#17000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="MetrixHDChannelCryptoInfo">ViaCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1590,975" size="330,45" text="Irdeto"      font="Regular;26" backgroundColor="#17000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="MetrixHDChannelCryptoInfo">IrdCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1590,975" size="330,45" text="SecaCrypt"   font="Regular;26" backgroundColor="#17000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="MetrixHDChannelCryptoInfo">SecaCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1590,975" size="330,45" text="NagraVision" font="Regular;26" backgroundColor="#17000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="MetrixHDChannelCryptoInfo">NagraCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1590,975" size="330,45" text="CryptoWork"  font="Regular;26" backgroundColor="#17000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="MetrixHDChannelCryptoInfo">CrwCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1590,975" size="330,45" text="NDS-VGuard"  font="Regular;26" backgroundColor="#17000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="MetrixHDChannelCryptoInfo">NdsCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+		<widget source="session.CurrentService" render="FixedLabel" position="1590,975" size="330,45" text="Conax"       font="Regular;26" backgroundColor="#17000000" foregroundColor="green" transparent="0" zPosition="4">
+			<convert type="MetrixHDChannelCryptoInfo">ConaxCrypt</convert>
+			<convert type="ConditionalShowHide" />
+		</widget>
+	</screen>
+</skin>
+
